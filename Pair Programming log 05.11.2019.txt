@@ -1,0 +1,11 @@
+Pair Programming logs
+05/11/2019
+
+Tim Richards - Driver
+Nathan Haigh - Observing
+
+Updated application to print text depending on which option the user selects - stacks text, does not wipe previous text from text box - need to fix
+Solution found using 'text.delete('1.0', END) 
+
+Delete text function included to wipe the text box after a different entry is selected.
+
