@@ -1,0 +1,18 @@
+Peer Programming Log
+
+7/11/2019  13:05
+
+Nathan Haigh, Chloe Dooley and Time Richards in attendance
+
+Weather forecast function being developed
+
+13:45
+
+Problems occured when working on Weather API and function, university computers would not allow download of libraries, using online python editor to test program 
+
+14:45
+
+Weather API still unresponsive, further testing required
+
+
+
