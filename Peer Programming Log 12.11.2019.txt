@@ -1,0 +1,15 @@
+Peer Programming Log 12/11/2019
+
+Tim Richards and Nathan Haigh in attendance
+
+13:15
+Working on Twitter API
+
+13:30
+Agreed to Twitter agreement to allow API to be used
+
+13:50
+Testing with Twitter API
+
+14:25
+Further testing using pip install tweepy
