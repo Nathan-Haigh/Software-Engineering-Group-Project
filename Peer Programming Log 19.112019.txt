@@ -9,7 +9,8 @@ Work on better integrating the Twitter API with the program and the GUI
 Work on making the GUI look more presentable and aesthetically pleasing using Pack Manager and Grid Manager to arrange the   
 
 
-
+14:30
+Implementing certain tweets into the GUI and displaying them in a set order
 
 
 
@@ -18,7 +19,7 @@ Work on making the GUI look more presentable and aesthetically pleasing using Pa
 Sources:
 
 http://www.openbookproject.net/courses/python4fun/tkphone1.html 19/11/2019 13:40
-
+https://towardsdatascience.com/tweepy-for-beginners-24baf21f2c25 19/11/2019 14:30
 
 
 
