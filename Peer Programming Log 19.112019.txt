@@ -1,0 +1,24 @@
+19/11/2019
+Peer Programming Log
+Nathan Haigh and Tim Richards in attendance
+
+13:05
+Work on better integrating the Twitter API with the program and the GUI
+
+13:45
+Work on making the GUI look more presentable and aesthetically pleasing using Pack Manager and Grid Manager to arrange the   
+
+
+
+
+
+
+
+
+Sources:
+
+http://www.openbookproject.net/courses/python4fun/tkphone1.html 19/11/2019 13:40
+
+
+
+
