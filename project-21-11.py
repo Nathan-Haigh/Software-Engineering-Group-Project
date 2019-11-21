@@ -1,23 +1,21 @@
-
 #Project for Software Engineering 
 #Timothy Richards, Edward Pidd, Chloe Dooley, Nathan Haigh
 #Date Started 29/10/2019
 
 # Imports
 import tkinter
-#import datetime
+import datetime
 import tweepy
-import keyword
 
-#from tkinter import *
-#from tkinter.ttk import *
-#from time import strftime
+from tkinter import *
+from tkinter.ttk import *
+from time import strftime
 # Instantiate window
 window = tkinter.Tk()
 
 # Function used to create window and then rename
 window.title("GUI")
-window.minsize(300, 400)
+window.minsize(600, 800)
 
 # Pack is used to show the object in the window    
 label = tkinter.Label(window, text = "Sports Circuit App").pack()
@@ -34,18 +32,15 @@ auth = tweepy.OAuthHandler("xTw4DTrjDfEmcNC62bHz8QSPn" , "zbk8hD0xV3M7r9sZYEawmZ
 auth.set_access_token("3233925630-aLsF2vD1j6FdBaV4HG1iHLeeJpjHB46A0DkVAC6" , "1ySAsPgGJ0ch22OID0k7Cj5qYD8MCAce2ITeshT0Q9MVR" )
 
 
+
+
 # Function ReturnChoice() prints out the radio button choice when it is clicked -- series[seriesChoice.get()] will get the relevant radio button choice from the array
 def ReturnChoice():
-    #print("Your choice is " + series[seriesChoice.get()] + '\n' ); 
+    print("Your choice is " + series[seriesChoice.get()] + '\n' ); 
     if(series[seriesChoice.get()] == series[1]):
         #print (f1Racesinfo[0][0] +" on the " + f1Racesinfo [1][0]) 
-        #lasttweet=twitterAPI(f1Race,place)
-        #twitter api and tweets 
-
-            
-            
         text.delete('1.0', END)
-        text.insert(tkinter.END,f1Race[place] +"\nStarting the " + f1Date [place] + " 2020" + "\nLocation " + f1Circuit[place] + "\nWeather" + "\n")
+        text.insert(tkinter.END,f1Race[place] +"\nStarting the " + f1Date [place] + " 2020" + "\nLocation " + f1Circuit[place] + "\nWeather" )
     else:
         text.delete('1.0', END)
         text.insert(tkinter.END," Next Rally")
@@ -70,38 +65,33 @@ def take1():
     else:
         place = 21
         ReturnChoice()
-        
-#def twitterAPI(f1Race,place,auth):
- #   global lasttweet
-  #  api = tweepy.API(auth)
-   # tweets=api.user_timeline(screen_name = 'F1',count=100)
-    #for tweet in tweets:
-     #   if f1Race[place] in tweet.text:
-      #      print (f1Race[place])
-       #     lasttweet=tweet.text
-        #    return lasttweet
-        
-global lasttweet
-api = tweepy.API(auth)
-tweets=api.user_timeline(screen_name = 'F1',count=10)
-for tweet in tweets:
-    if "#BrazilGP" in tweet.text:
-        print(tweet.text)
-        lasttweet=tweet
+    
 # Code below instantiates radio buttons and ties variable seriesChoice to each button
 seriesChoice = tkinter.IntVar()
 tkinter.Radiobutton(window,text="Formula 1",padx = 20,variable=seriesChoice,value=1,command=ReturnChoice).pack(anchor=tkinter.W)
 tkinter.Radiobutton(window,text="Rally",padx = 20,variable=seriesChoice,value=0,command=ReturnChoice).pack(anchor=tkinter.W)
 
-text = TEXT(window, width=40, height=10)
+
+text = Text(window, width=40, height=10)
 text.pack()
 
+
 next = tkinter.Button(window, text="Next", command =lambda: add1())
-next.pack(side=RIGHT)
+next.pack()
 
 last = Button(window, text="Last", command = lambda:take1())
-last.pack(side=LEFT)
-   
+last.pack()
+
+twitter = Text(window,width=40,height=10)
+twitter.pack()
+
+api = tweepy.API(auth)
+tweets=api.user_timeline(screen_name = 'F1',count=10)
+for tweet in tweets:
+     if "#BrazilGP" in tweet.text:
+         lasttweet=tweet.text
+         twitter.insert(tkinder.END,"tedt")
+         print(lasttweet)
 
 # This generates the window - keep at bottom of code
 window.mainloop()
